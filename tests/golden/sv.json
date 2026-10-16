@@ -1,0 +1,23 @@
+{
+  "analyzer_version": "1",
+  "cases": [
+    {
+      "text": "Växterna utför fotosyntes i bladen.",
+      "terms": [
+        "växt",
+        "utför",
+        "fotosynt",
+        "blad"
+      ]
+    },
+    {
+      "text": "Barn och ungas upplevelser av sorg",
+      "terms": [
+        "barn",
+        "ung",
+        "upplev",
+        "sorg"
+      ]
+    }
+  ]
+}

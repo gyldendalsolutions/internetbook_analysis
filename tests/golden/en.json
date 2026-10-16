@@ -1,0 +1,30 @@
+{
+  "analyzer_version": "1",
+  "cases": [
+    {
+      "text": "The plants photosynthesise in their leaves.",
+      "terms": [
+        "plant",
+        "photosynthesis",
+        "leav"
+      ]
+    },
+    {
+      "text": "Groupthink and decision-making in organisations",
+      "terms": [
+        "groupthink",
+        "decis",
+        "make",
+        "organis"
+      ]
+    },
+    {
+      "text": "Theoretical perspectives on learning",
+      "terms": [
+        "theoret",
+        "perspect",
+        "learn"
+      ]
+    }
+  ]
+}

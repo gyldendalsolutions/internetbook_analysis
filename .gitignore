@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+.idea/
+# Release credentials live in ~/.pypirc, never here.
+.pypirc
+*.whl
+*.tar.gz

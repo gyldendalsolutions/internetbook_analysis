@@ -1,0 +1,13 @@
+{
+  "analyzer_version": "1",
+  "cases": [
+    {
+      "text": "Le piante fanno la fotosintesi nelle foglie.",
+      "terms": [
+        "piant",
+        "fotosintes",
+        "fogl"
+      ]
+    }
+  ]
+}

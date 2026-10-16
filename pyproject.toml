@@ -1,0 +1,49 @@
+[project]
+name = "internetbook-analysis"
+# Single source: __version__ in src/internetbook_analysis/__init__.py.
+dynamic = ["version"]
+description = "Text analysis and BM25 weighting shared by internetbook indexing and search"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.12"
+authors = [{ name = "Gyldendal Solutions" }]
+dependencies = [
+    # Pinned exactly: a new snowballstemmer can stem differently, which
+    # silently desynchronises indexed documents from queries. Upgrading it
+    # is a release with a new ANALYZER_VERSION.
+    "snowballstemmer==3.1.1",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: OS Independent",
+    "Topic :: Text Processing :: Indexing",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0,<10.0.0",
+]
+
+[project.urls]
+Repository = "https://github.com/gyldendalsolutions/internetbook-analysis"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/internetbook_analysis/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/internetbook_analysis"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "NOTICE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

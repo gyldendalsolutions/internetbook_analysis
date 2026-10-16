@@ -1,0 +1,112 @@
+{
+  "analyzer_version": "1",
+  "cases": [
+    {
+      "text": "Planterne laver fotosyntese i bladene.",
+      "terms": [
+        "plant",
+        "lav",
+        "fotosyntes",
+        "blad"
+      ]
+    },
+    {
+      "text": "Patientsikkerhed og kvalitet i sundhedsvæsenet",
+      "terms": [
+        "patientsikker",
+        "kvalit",
+        "sundhedsvæsen"
+      ]
+    },
+    {
+      "text": "Teoretiske perspektiver på læring",
+      "terms": [
+        "teoretisk",
+        "perspektiv",
+        "læring"
+      ]
+    },
+    {
+      "text": "økonomiske, organisatoriske rammer i en kommune",
+      "terms": [
+        "økonomisk",
+        "organisatorisk",
+        "ram",
+        "kommun"
+      ]
+    },
+    {
+      "text": "Børn og unges oplevelser af sorggruppeforløb",
+      "terms": [
+        "børn",
+        "ung",
+        "oplev",
+        "sorggruppeforløb"
+      ]
+    },
+    {
+      "text": "Kari Martinsens omsorgsteori",
+      "terms": [
+        "kari",
+        "martins",
+        "omsorgsteori"
+      ]
+    },
+    {
+      "text": "kliniske metoder i sygeplejepraksis",
+      "terms": [
+        "klinisk",
+        "metod",
+        "sygeplejepraksis"
+      ]
+    },
+    {
+      "text": "SMTTE-modellen",
+      "terms": [
+        "smtte",
+        "model"
+      ]
+    },
+    {
+      "text": "Anatomi og fysiologi – Hånden på hjertet. 3. udgave",
+      "terms": [
+        "anatomi",
+        "fysiologi",
+        "hånd",
+        "hjert",
+        "3",
+        "udgav"
+      ]
+    },
+    {
+      "text": "ISBN 9788772047263 (2. oplag, 2024)",
+      "terms": [
+        "isbn",
+        "9788772047263",
+        "2",
+        "oplag",
+        "2024"
+      ]
+    },
+    {
+      "text": "Forældretab i ungeliv – et eksistentielt udviklingsperspektiv på sorg",
+      "terms": [
+        "forældretab",
+        "ungeliv",
+        "eksistentielt",
+        "udviklingsperspektiv",
+        "sorg"
+      ]
+    },
+    {
+      "text": "Sygeplejersken taler med patienterne om ernæring og livskvalitet.",
+      "terms": [
+        "sygeplejersk",
+        "tal",
+        "patient",
+        "ernæring",
+        "livskvalit"
+      ]
+    }
+  ]
+}

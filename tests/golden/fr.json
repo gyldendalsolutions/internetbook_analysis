@@ -1,0 +1,14 @@
+{
+  "analyzer_version": "1",
+  "cases": [
+    {
+      "text": "Les plantes réalisent la photosynthèse dans les feuilles.",
+      "terms": [
+        "plant",
+        "réalisent",
+        "photosynthes",
+        "feuill"
+      ]
+    }
+  ]
+}

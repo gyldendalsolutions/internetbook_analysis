@@ -1,0 +1,13 @@
+{
+  "analyzer_version": "1",
+  "cases": [
+    {
+      "text": "Kalaallisut oqaatsit ilinniarnissaat",
+      "terms": [
+        "kalaallisut",
+        "oqaatsit",
+        "ilinniarnissaat"
+      ]
+    }
+  ]
+}

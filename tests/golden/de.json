@@ -1,0 +1,22 @@
+{
+  "analyzer_version": "1",
+  "cases": [
+    {
+      "text": "Die Pflanzen betreiben Photosynthese in den Blättern.",
+      "terms": [
+        "pflanz",
+        "betreib",
+        "photosynthes",
+        "blatt"
+      ]
+    },
+    {
+      "text": "Theoretische Perspektiven auf das Lernen",
+      "terms": [
+        "theoret",
+        "perspektiv",
+        "lern"
+      ]
+    }
+  ]
+}

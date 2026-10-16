@@ -1,0 +1,14 @@
+{
+  "analyzer_version": "1",
+  "cases": [
+    {
+      "text": "Íslensk málfræði og bókmenntir",
+      "terms": [
+        "íslensk",
+        "málfræði",
+        "og",
+        "bókmenntir"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "analyzer_version": "1",
+  "cases": [
+    {
+      "text": "Plantene driver fotosyntese i bladene.",
+      "terms": [
+        "plant",
+        "driv",
+        "fotosyntes",
+        "blad"
+      ]
+    }
+  ]
+}

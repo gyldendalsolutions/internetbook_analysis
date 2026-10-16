@@ -1,0 +1,14 @@
+{
+  "analyzer_version": "1",
+  "cases": [
+    {
+      "text": "Las plantas realizan la fotosíntesis en las hojas.",
+      "terms": [
+        "plant",
+        "realiz",
+        "fotosintesis",
+        "hoj"
+      ]
+    }
+  ]
+}

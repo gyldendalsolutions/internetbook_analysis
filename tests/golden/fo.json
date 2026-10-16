@@ -1,0 +1,14 @@
+{
+  "analyzer_version": "1",
+  "cases": [
+    {
+      "text": "Føroyskt mál og bókmentir",
+      "terms": [
+        "føroyskt",
+        "mál",
+        "og",
+        "bókmentir"
+      ]
+    }
+  ]
+}
