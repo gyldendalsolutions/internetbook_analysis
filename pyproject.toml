@@ -30,7 +30,7 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/gyldendalsolutions/internetbook-analysis"
+Repository = "https://github.com/gyldendalsolutions/internetbook_analysis"
 
 [build-system]
 requires = ["hatchling"]

@@ -30,7 +30,7 @@ from internetbook_analysis.bm25 import (
 )
 from internetbook_analysis.query import TermStatistics, query_weights
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = [
     "ANALYZER_VERSION",

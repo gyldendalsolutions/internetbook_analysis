@@ -1,5 +1,5 @@
 {
-  "analyzer_version": "1",
+  "analyzer_version": "2",
   "cases": [
     {
       "text": "Planterne laver fotosyntese i bladene.",
@@ -41,7 +41,9 @@
         "børn",
         "ung",
         "oplev",
-        "sorggruppeforløb"
+        "sorggruppeforløb",
+        "sorg",
+        "gruppeforløb"
       ]
     },
     {
@@ -49,7 +51,9 @@
       "terms": [
         "kari",
         "martins",
-        "omsorgsteori"
+        "omsorgsteori",
+        "omsorg",
+        "teori"
       ]
     },
     {

@@ -8,7 +8,7 @@ name: Publish
 # Publishing settings (or as a "pending publisher" before the first release):
 #
 #   Owner:        gyldendalsolutions
-#   Repository:   internetbook-analysis
+#   Repository:   internetbook_analysis   (the PyPI project is internetbook-analysis)
 #   Workflow:     publish.yaml
 #   Environment:  pypi
 #

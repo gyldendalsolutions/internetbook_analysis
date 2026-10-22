@@ -14,7 +14,11 @@ import snowballstemmer
 #: change of snowballstemmer version (pinned exactly for that reason). The
 #: indexer puts it in every document's content hash, so a change re-indexes
 #: the corpus, and the search API refuses statistics built with another one.
-ANALYZER_VERSION = "1"
+#:
+#: 1: initial.
+#: 2: Danish compound splitting (compounds.py; dictionary from the corpus,
+#:    2026-10-22).
+ANALYZER_VERSION = "2"
 
 #: Snowball algorithm per primary language subtag. Languages missing here
 #: (Faroese, Icelandic, Greenlandic) have no Snowball stemmer, and are indexed
@@ -158,5 +162,16 @@ class Analyzer:
 
 @lru_cache(maxsize=32)
 def analyzer_for(language: str) -> Analyzer:
-    """The shared analyzer for a language. Unknown languages are unstemmed."""
-    return Analyzer(language)
+    """The shared analyzer for a language. Unknown languages are unstemmed.
+
+    Languages with a compound dictionary (see compounds.py; Danish) also
+    split compounds.
+    """
+    from internetbook_analysis.compounds import DictionaryDecompounder, load_dictionary
+
+    algorithm = _STEMMERS.get(normalize_language(language))
+    words = load_dictionary(algorithm) if algorithm else None
+    if words is None:
+        return Analyzer(language)
+    stemmer = snowballstemmer.stemmer(algorithm)
+    return Analyzer(language, decompounder=DictionaryDecompounder(words, stemmer.stemWord))
