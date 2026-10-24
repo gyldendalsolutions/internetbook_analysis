@@ -18,7 +18,36 @@ import snowballstemmer
 #: 1: initial.
 #: 2: Danish compound splitting (compounds.py; dictionary from the corpus,
 #:    2026-10-22).
+#:
+#: A language with analysis of its own adds its own version to this one
+#: (analyzer_version): Greenlandic, Faroese and Icelandic morphology since
+#: 2026-10-23.
 ANALYZER_VERSION = "2"
+
+
+def analyzer_version(language: str) -> str:
+    """The analysis version of one language's terms.
+
+    ANALYZER_VERSION, plus the version of a language's own analysis where it
+    has one (Greenlandic: greenlandic.KAL_ANALYSER_VERSION; Faroese:
+    faroese.FAO_ANALYSER_VERSION; Icelandic: icelandic.ISL_ANALYSIS_VERSION).
+    A change to one language's analysis then re-indexes only that language's
+    content.
+    """
+    code = normalize_language(language)
+    if code == "kl":
+        from internetbook_analysis.greenlandic import KAL_ANALYSER_VERSION
+
+        return f"{ANALYZER_VERSION}+kal{KAL_ANALYSER_VERSION}"
+    if code == "fo":
+        from internetbook_analysis.faroese import FAO_ANALYSER_VERSION
+
+        return f"{ANALYZER_VERSION}+fao{FAO_ANALYSER_VERSION}"
+    if code == "is":
+        from internetbook_analysis.icelandic import ISL_ANALYSIS_VERSION
+
+        return f"{ANALYZER_VERSION}+isl{ISL_ANALYSIS_VERSION}"
+    return ANALYZER_VERSION
 
 #: Snowball algorithm per primary language subtag. Languages missing here
 #: (Faroese, Icelandic, Greenlandic) have no Snowball stemmer, and are indexed
@@ -165,10 +194,24 @@ def analyzer_for(language: str) -> Analyzer:
     """The shared analyzer for a language. Unknown languages are unstemmed.
 
     Languages with a compound dictionary (see compounds.py; Danish) also
-    split compounds.
+    split compounds. Greenlandic adds each word's root and derivation stems
+    (greenlandic.py), Faroese and Icelandic their lemmas and compound parts
+    (faroese.py, icelandic.py).
     """
     from internetbook_analysis.compounds import DictionaryDecompounder, load_dictionary
 
+    if normalize_language(language) == "kl":
+        from internetbook_analysis.greenlandic import GreenlandicMorphology
+
+        return Analyzer(language, decompounder=GreenlandicMorphology())
+    if normalize_language(language) == "fo":
+        from internetbook_analysis.faroese import FaroeseMorphology
+
+        return Analyzer(language, decompounder=FaroeseMorphology())
+    if normalize_language(language) == "is":
+        from internetbook_analysis.icelandic import IcelandicMorphology
+
+        return Analyzer(language, decompounder=IcelandicMorphology())
     algorithm = _STEMMERS.get(normalize_language(language))
     words = load_dictionary(algorithm) if algorithm else None
     if words is None:

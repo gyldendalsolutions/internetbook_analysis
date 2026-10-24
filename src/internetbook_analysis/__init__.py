@@ -17,6 +17,7 @@ from internetbook_analysis.analyzer import (
     Decompounder,
     NoDecompounder,
     analyzer_for,
+    analyzer_version,
     normalize_language,
 )
 from internetbook_analysis.bm25 import (
@@ -30,7 +31,7 @@ from internetbook_analysis.bm25 import (
 )
 from internetbook_analysis.query import TermStatistics, query_weights
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 __all__ = [
     "ANALYZER_VERSION",
@@ -42,6 +43,7 @@ __all__ = [
     "SPARSE_DIMENSIONS",
     "TermStatistics",
     "analyzer_for",
+    "analyzer_version",
     "document_weights",
     "idf",
     "normalize_language",

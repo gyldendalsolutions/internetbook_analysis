@@ -13,6 +13,13 @@ dependencies = [
     # silently desynchronises indexed documents from queries. Upgrading it
     # is a release with a new ANALYZER_VERSION.
     "snowballstemmer==3.1.1",
+    # Reads the bundled Greenlandic analyser (greenlandic.py). Pinned for
+    # the same reason: a different lookup could analyse differently.
+    "pyhfst==1.4.1",
+    # Icelandic lemmas and compounds from BÍN (icelandic.py). The data is a
+    # separate package; both pinned, since a new BÍN changes the analysis.
+    "islenska==2.1.0",
+    "islenska-data==5.0.0",
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",

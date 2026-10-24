@@ -49,10 +49,12 @@ class TestAnalyzer:
         assert analyzer_for("da").analyze("a" * 41 + " ord") == ["ord"]
 
     def test_unknown_language_is_unstemmed(self):
-        """Faroese, Icelandic and Greenlandic have no Snowball stemmer."""
-        analyzer = analyzer_for("kl")
+        """A language without a configured stemmer or analysis of its own
+        keeps every word as written (Greenlandic, Faroese and Icelandic have
+        their own: test_greenlandic.py, test_faroese.py, test_icelandic.py)."""
+        analyzer = analyzer_for("fi")
         assert not analyzer.stems
-        assert analyzer.analyze("Kalaallisut oqaatsit") == ["kalaallisut", "oqaatsit"]
+        assert analyzer.analyze("Suomen kieli") == ["suomen", "kieli"]
 
     def test_regional_tag_uses_language_stemmer(self):
         assert analyzer_for("da-DK").analyze("planterne") == ["plant"]

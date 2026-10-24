@@ -1,13 +1,54 @@
 {
-  "analyzer_version": "2",
+  "analyzer_version": "2+isl1",
   "cases": [
     {
       "text": "Íslensk málfræði og bókmenntir",
       "terms": [
         "íslensk",
+        "íslenskur",
         "málfræði",
         "og",
-        "bókmenntir"
+        "bókmenntir",
+        "bókmennt"
+      ]
+    },
+    {
+      "text": "Kennslubókin í skólanum fjallar um landbúnaðarráðherra",
+      "terms": [
+        "kennslubókin",
+        "kennslubók",
+        "kennsla",
+        "bók",
+        "í",
+        "skólanum",
+        "skólinn",
+        "skóli",
+        "fjallar",
+        "fjalla",
+        "um",
+        "landbúnaðarráðherra",
+        "land",
+        "búnaður",
+        "ráðherra"
+      ]
+    },
+    {
+      "text": "Hestarnir fóru til Reykjavíkur með orðabókina",
+      "terms": [
+        "hestarnir",
+        "hestur",
+        "fóru",
+        "fóra",
+        "fara",
+        "til",
+        "reykjavíkur",
+        "reykjavík",
+        "með",
+        "orðabókina",
+        "orðabók",
+        "orð",
+        "orða",
+        "bók"
       ]
     }
   ]

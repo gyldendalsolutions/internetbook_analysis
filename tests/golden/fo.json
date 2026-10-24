@@ -1,13 +1,52 @@
 {
-  "analyzer_version": "2",
+  "analyzer_version": "2+fao1",
   "cases": [
     {
       "text": "Føroyskt mál og bókmentir",
       "terms": [
         "føroyskt",
+        "føroyskur",
         "mál",
+        "mála",
         "og",
-        "bókmentir"
+        "bókmentir",
+        "bók",
+        "mentir"
+      ]
+    },
+    {
+      "text": "Arbeiðsuppgávur til skúlabøkurnar í skúlanum",
+      "terms": [
+        "arbeiðsuppgávur",
+        "arbeið",
+        "uppgáva",
+        "til",
+        "skúlabøkurnar",
+        "skúlabók",
+        "skúli",
+        "bók",
+        "í",
+        "skúlanum",
+        "skúli"
+      ]
+    },
+    {
+      "text": "Landsstýrið í Føroyum og fólkatalið í Íslandi",
+      "terms": [
+        "landsstýrið",
+        "land",
+        "stýri",
+        "í",
+        "føroyum",
+        "føroyar",
+        "og",
+        "fólkatalið",
+        "fólkatal",
+        "fólk",
+        "tal",
+        "í",
+        "íslandi",
+        "ísland"
       ]
     }
   ]
