@@ -31,6 +31,28 @@ A new dictionary changes analysis output: follow "Changing analysis output"
 above. Rebuild occasionally (new subject areas), not routinely: compounds of
 known words split without one.
 
+## GiellaLT analysers
+
+`morphology/kal-analyser-gt-desc.hfstol` (Greenlandic) and `morphology/fao-analyser-gt-desc.hfstol` (Faroese) come from GiellaLT's nightly Debian packages `giella-kal` and `giella-fao` (Apertium repository, `pool/main/g/`); `morphology/README.md` records the builds and their SHA-256. To update one:
+
+1. Download the `giella-<code>_*.deb`, unpack it (`ar x`, then `tar xf data.tar.xz`), and copy `usr/share/giella/<code>/analyser-gt-desc.hfstol` over the bundled file.
+2. Record the package version and SHA-256 in `morphology/README.md`.
+3. Bump the language's version (`KAL_ANALYSER_VERSION` in `greenlandic.py`, `FAO_ANALYSER_VERSION` in `faroese.py`), then regenerate the golden files and review that language's file in `tests/golden/`.
+4. Release; the indexer then re-indexes that language's content only.
+
+## Greenlandic dictionary roots
+
+`dictionaries/greenlandic_roots.txt.gz` lists the roots Oqaasileriffik's Greenlandic-English dictionary attests; `greenlandic.py` prefers them when choosing between readings. It is built from the dictionary's spreadsheets (CC BY-SA 4.0):
+
+    git clone https://github.com/Oqaasileriffik/dicts /tmp/dicts
+    .venv/bin/python scripts/build_greenlandic_roots.py "/tmp/dicts/2018 Chicago"
+
+Rebuild it when the dictionary or the Greenlandic analyser changes: it is analysed with the bundled analyser. A new list changes analysis output: bump `KAL_ANALYSER_VERSION` and follow "Changing analysis output" above.
+
+## Icelandic (BÍN)
+
+Icelandic analysis reads BÍN through `islenska` and `islenska-data`, both pinned exactly in `pyproject.toml`. A new BÍN release or a new `islenska` changes the analysis: update both pins together, bump `ISL_ANALYSIS_VERSION` in `icelandic.py`, regenerate the golden files and review `tests/golden/is.json`.
+
 ## Release
 
 1. Bump `__version__` in `src/internetbook_analysis/__init__.py` (the only

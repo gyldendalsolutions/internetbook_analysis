@@ -42,11 +42,18 @@ SENTENCES = {
     ],
     "is": [
         "Íslensk málfræði og bókmenntir",
+        "Kennslubókin í skólanum fjallar um landbúnaðarráðherra",
+        "Hestarnir fóru til Reykjavíkur með orðabókina",
     ],
     "kl": [
         "Kalaallisut oqaatsit ilinniarnissaat",
+        "Ilinniarfissuarmi ilinniartitsisoq atuakkanik atuarpoq",
+        "Kalaallit Nunaanni inuit aamma nunatsinni pinngortitaq",
+        "Hans Lynge aamma Danmarkimi",
     ],
     "fo": [
         "Føroyskt mál og bókmentir",
+        "Arbeiðsuppgávur til skúlabøkurnar í skúlanum",
+        "Landsstýrið í Føroyum og fólkatalið í Íslandi",
     ],
 }

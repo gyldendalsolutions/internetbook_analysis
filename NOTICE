@@ -1,0 +1,33 @@
+internetbook-analysis
+Copyright Gyldendal Solutions. Licensed under the MIT licence (LICENSE),
+except for the third-party material below, which keeps its own licence.
+
+Snowball stopword lists (src/internetbook_analysis/stopwords/)
+  From the Snowball project (https://snowballstem.org/), copied unmodified.
+  BSD 3-Clause licence.
+
+GiellaLT morphological analysers
+(src/internetbook_analysis/morphology/*-analyser-gt-desc.hfstol)
+  GiellaLT's Greenlandic (https://github.com/giellalt/lang-kal) and Faroese
+  (https://github.com/giellalt/lang-fao) analysers, copyright 2005 The
+  University of Tromsø, distributed unmodified under the GNU General Public
+  License, version 3 or later. Full text:
+  src/internetbook_analysis/morphology/COPYING.giellalt. Provenance:
+  src/internetbook_analysis/morphology/README.md.
+
+BÍN, the Database of Icelandic Morphology (Beygingarlýsing íslensks
+nútímamáls)
+  Icelandic lemmas and inflections (icelandic.py) come from BÍN, copyright
+  the Árni Magnússon Institute for Icelandic Studies, licensed CC BY-SA 4.0
+  (https://bin.arnastofnun.is). It is not distributed with this package: it
+  is read through the islenska and islenska-data packages (Miðeind), which
+  are installed as dependencies.
+
+Greenlandic dictionary roots
+(src/internetbook_analysis/dictionaries/greenlandic_roots.txt.gz)
+  Derived from Oqaasileriffik's 2018 Greenlandic-English dictionary
+  (https://github.com/Oqaasileriffik/dicts, published at
+  https://ordbog.gl/2018-kal-eng/), licensed CC BY-SA 4.0: the roots of its
+  headwords as analysed by the Greenlandic analyser above. This file is
+  licensed CC BY-SA 4.0 likewise. Built by scripts/build_greenlandic_roots.py.
+
